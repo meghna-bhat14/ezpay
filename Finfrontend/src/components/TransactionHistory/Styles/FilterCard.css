@@ -1,0 +1,131 @@
+.filter-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font for a more modern look */
+    padding: 2rem;
+  }
+  
+  .filter-card {
+    background: linear-gradient(180deg, rgba(48, 63, 78, 0.9), rgba(22, 47, 73, 0.9)); /* Glass effect */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Enhanced shadow for 3D effect */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+    position: relative; /* Needed for the line */
+    margin-bottom: 20px; /* Space between filter cards */
+  }
+  
+  .filter-card:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last card */
+  }
+  
+  .filter-title {
+    font-size: 28px; /* Larger font size for better readability */
+    color: white;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: bold; /* Bolder font for emphasis */
+  }
+  
+  .filter-section {
+    margin-bottom: 10px; /* More space between sections */
+  }
+  
+  .filter-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px; /* Increased padding for a better touch experience */
+    color:white;
+    border-radius: 50px; /* More rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for interactive feedback */
+  }
+  
+  .filter-heading:hover, .filter-heading:focus {
+    background-color: rgba(208, 208, 208, 0.8); /* Semi-transparent hover color */
+    transform: scale(1.03); /* Scale up on hover/focus for feedback */
+  }
+  
+  .filter-input, .filter-select {
+    width: 80%;
+    padding: 10px; /* Slightly more padding for aesthetics */
+    margin-top: 8px;
+    border: 2px solid #ccc; /* Thicker border for better visibility */
+    border-radius: 20px; /* Rounded edges on inputs */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+  }
+  
+  .filter-input:focus, .filter-select:focus {
+    border-color: #9ecaed; /* Highlight focus with a different border color */
+    box-shadow: 0 0 10px #9ecaed; /* Adding focus shadow for accessibility */
+  }
+  .filter-section {
+    overflow: hidden; /* Hide overflow to enable smooth transition */
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Transition for height and opacity */
+  }
+  
+  .filter-section.open {
+    max-height: 200px; /* Set a maximum height when open (adjust as needed) */
+    opacity: 1; /* Fully visible */
+  }
+  
+  .filter-section.closed {
+    max-height: 0; /* Collapse height */
+    opacity: 0; /* Fully transparent */
+  }
+  
+  .filter-button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Larger font for readability */
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .apply-button {
+    background: #bdd5f0; /* Gradient from light blue to darker blue */
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.3); /* Light glass-like effect */
+    transition: all 0.3s ease;
+  }
+  
+  .apply-button:hover, .apply-button:focus {
+    background: linear-gradient(145deg, #66A7E2, #0056b3); /* Slightly lighter blue on hover */
+    color:white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.5); /* More shine on hover */
+  }
+  
+  .reset-button {
+    background: linear-gradient(145deg, #B0BEC5, #78909C); /* Gradient from light grey to darker grey */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.3); /* Light glass-like effect */
+    transition: all 0.3s ease;
+  }
+  
+  .reset-button:hover, .reset-button:focus {
+    background: grey; /* Slightly lighter grey on hover */
+    color:black;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.5); /* More shine on hover */
+  }
+  
+  
+  .filter-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .filter-divider {
+    height: 1px; /* Thickness of the line */
+    background-color: rgba(255, 255, 255, 0.3); /* Color of the line */
+    margin: 20px 0; /* Space above and below the line */
+  }

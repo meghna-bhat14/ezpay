@@ -1,0 +1,84 @@
+.transaction-container {
+    width: 75%;
+    padding: 2rem;
+    border-radius: 8px;
+    
+}
+
+.transaction-list {
+    backdrop-filter: blur(50px); /* Frosted glass blur effect */
+    background: linear-gradient(90deg, #b4bcc5, #34495e);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+}
+
+.transaction-card {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transaction-header-row { 
+    font-weight: bold;
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s; 
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .header-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .transaction-card:hover {
+    transform: translateY(-2px);
+    background-color: #f9f9f9;
+  }
+  
+  .transaction-cell {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .transaction-status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+  }
+  
+  .debit {
+    color: #F44336;
+  }
+  
+  .credit {
+    color: #4CAF50;
+  }
+
+  .no-transaction-found {
+    display: flex;              
+    justify-content: center;      
+    align-items: center;
+    font-size: 20px;   
+    font-weight: bold; 
+    color: white;
+  }

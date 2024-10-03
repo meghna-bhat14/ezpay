@@ -1,0 +1,351 @@
+/**
+ * TransactionDetail Styles
+ * 
+ * This CSS file contains styles for the TransactionDetail component of the application. It defines aesthetics for the
+ * transaction details page including grid layouts, responsive tiles for each transaction detail, and conditional styling 
+ * based on transaction status (pending, completed, failed, cancelled). Styles include background colors, fonts, 
+ * transitions for hover effects, and more to enhance user interface and experience. 
+ * The file uses modern CSS features like grid, transitions, and pseudo-elements for advanced styling effects.
+ * 
+ * Author: Medha
+ * Description: Scoped styles for enhancing the transaction detail page with responsive design and dynamic visual feedback based on transaction status.
+ *
+ * Modified By: Chandan
+
+ */
+
+/* Scoped styles for the Transaction Detail page */
+.transaction-details-page {
+    /* Split background effect - vertical split */
+    margin: 0;
+    padding: 0;
+    height: 118vh;
+    background: linear-gradient(90deg, #d7dde2, #34495e);
+ 
+  
+ body {
+     margin: 0;
+     padding: 0;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start; 
+    /* Background gradient as per the instruction */
+    
+ }
+ 
+ /* Transaction details container */
+ .transaction-details-container {
+     width: 100%; /* Full width */
+     padding: 1.5rem;
+     max-width: 800px; /* Stretch horizontally */
+     margin: 1rem auto;
+     background-color: #0093E9;
+     background: linear-gradient(90deg, #c0cedb, #34495e);
+     border-radius: 8px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+     transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s;
+ }
+ 
+ .transaction-details-container:hover {
+     transform: scale(1.02); /* Slightly scale up */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+     background-color: #008EC9; /* Slightly darker background color */
+     background-image: linear-gradient(to top, #099c70 0%, #45ca9f 100%); /* Slightly different gradient to give dynamic feel */
+ }
+ 
+ 
+ /* CSS Grid Layout for Transaction Details */
+ .transaction-detail-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr; /* 2 equal columns for layout */
+     gap: 1rem; /* Adds space between grid items */
+     grid-template-areas: 
+         "status status"      /* Status takes the full width */
+         "amount bank"
+         "date rescen"     /* Remarks and Sent to side by side */
+         "remarks label" ;      /* Date and Sent to side by side */
+         
+ }
+ 
+ .status-tile {
+     grid-area: status;
+ }
+ .transaction-id-upi {
+     grid-area: upi;
+ }
+ .transaction-id-bank {
+     grid-area: bank;
+ }
+ .amount-tile {
+     grid-area: amount;
+ }
+ .date-tile {
+     grid-area: date;
+ }
+ .remarks-tile {
+     grid-area: remarks;
+ }
+ .label-tile {
+     grid-area: label;
+ }
+ 
+ /* Tile Effect for Each Detail */
+ /* General Tile Styling */
+ .transaction-detail-tile {
+ 
+     padding: 0.3rem;
+     background-color: #ffffff;
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+ 
+ 
+ .transaction-detail-tile:hover {
+    background: linear-gradient(180deg, #a6b6d8, #b0c9e2);
+     color: #fff; /* Optional: Change the text color to white for contrast */
+     transform: scale(1.05); /* Slight scaling for effect */
+     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Keep the shadow effect */
+     transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease-in-out;
+ }
+ 
+ 
+ 
+ /* Circular status container
+ .circular-status-container {
+     position: relative;
+     width: 80px;
+     height: 80px;
+     border-radius: 80%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #ffffff; /* Base circle background 
+ } */
+ 
+ /* Circular progress for status
+ .circular-status-container::before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     border: 6px solid transparent;
+     box-sizing: border-box;
+     transform: rotate(180deg); /* Default rotation for pending 
+ } */
+ 
+ 
+ 
+ .circular-status-container.pending::before {
+     border-color: #FFA500; /* Yellow for pending */
+     border-bottom-color: transparent; /* Half-circle */
+     transform: rotate(180deg); /* Half-circle effect */
+ }
+ 
+ .circular-status-container.cancelled::before {
+     border-color: #9E9E9E; /* Grey for cancelled */
+     transform: rotate(360deg); /* Full circle */
+ }
+ 
+ /* Status text in the center of the circle */
+ /* .status-text {
+     font-size: 0.7rem;
+     font-weight: bold;
+     color: #021730;
+     position: absolute;
+     text-align: center;
+ } */
+ .failed-logo {
+     width: 150px;    /* Adjust width to your desired size */
+     height: 120px;   /* Adjust height to your desired size */
+ }
+ .success-logo {
+     width: 120px;    /* Adjust width to your desired size */
+     height: 120px;   /* Adjust height to your desired size */
+ }
+ .pending-logo {
+     width: 150px;    /* Adjust width to your desired size */
+     height: 130px;   /* Adjust height to your desired size */
+ }
+ .cancelled-logo
+ {
+     width:120px;
+     height:100px;
+ }
+ /* Styling for transaction text */
+ .transaction-detail-tile p {
+     margin: 0.5rem 0;
+     font-size: 1rem;
+     color: #333;
+ }
+ 
+ .transaction-detail-tile strong {
+     font-size: 1.1rem;
+     color: #555;
+ }
+ 
+ 
+ /* Status Styling */
+ .transaction-status {
+     border-radius: 20px;
+     font-size: 1rem;
+     font-weight: bold;
+     color: #fff;
+     display: inline-block;
+ }
+ 
+ .transaction-status.pending {
+     background-color: #FFA500; /* Orange for Pending */
+ }
+ 
+ .transaction-status.completed {
+     background-color: #4CAF50; /* Green for Completed */
+ }
+ 
+ .transaction-status.failed {
+     background-color: #F44336; /* Red for Failed */
+ }
+ 
+ .transaction-status.cancelled {
+     background-color: #9E9E9E; /* Grey for Cancelled */
+ }
+ 
+ /* Amount-specific styling with new font type and color */
+ .amount-tile .payment-text {
+     font-family: 'Arial', sans-serif; /* Change to desired font-family */
+     font-size: 1.6rem; /* Larger font size */
+     font-weight: bold; /* Make the text bold */
+     color: #02183a; /* Change the color to match the blue shown in the image */
+ }
+ 
+ /* You can also add a hover effect to make it more interactive */
+ .amount-tile .payment-text:hover {
+     color: #042b5e; /* Slightly darker blue on hover */
+ }
+ .transaction-action-buttons button {
+     padding: 20px 40px;
+     margin: 30px;
+     background-color:white; /* Semi-transparent white */
+     color: black;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     backdrop-filter: blur(10px); /* Frosted glass blur effect */
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+     transition: background-color 0.3s, color 0.3s;
+     border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+ }
+ 
+ .transaction-action-buttons button:hover {
+     color: #fff; /* White text */
+     background-color: #0f0f0f; /* Darker green on hover */
+ }
+ .transaction-detail-header {
+     font-size: 30px; /* Sets the size of the font */
+     color: white; /* Deep teal color */
+     text-align: center; /* Centers the text */
+     margin-top: 10px; /* Adds space above the header */
+     margin-bottom: 10px; /* Adds space below the header */
+     font-weight: bold; /* Makes the font bold */
+     
+     /* Frosted glass effect */
+     padding: 10px 20px; /* Adds padding around the text */
+     /* Adds a subtle border to enhance the effect */
+ }
+ 
+ /*---------------------------------------------------------------------CASE BASED STYLING-----------------------------------------------------------------*/
+ 
+ .transaction-details-container.pending {
+     background: linear-gradient(90deg, #2c3e50, #34495e);
+ }
+ 
+ .transaction-detail-tile.pending {
+     background: linear-gradient(90deg, #f1f2f5, #e8e9eb);
+ }
+ 
+ .transaction-detail-tile.pending:hover {
+     background: linear-gradient(180deg, #a6b6d8, #b0c9e2);
+ }
+ .transaction-details-container.pending:hover {
+     background: linear-gradient(90deg, #173f64, #34495e);
+ }
+ 
+ .transaction-details-container.completed {
+     background: linear-gradient(90deg, #2c3e50, #34495e);
+ }
+ .transaction-details-container.completed:hover {
+     background: linear-gradient(90deg, #173f64, #34495e);
+ }
+ 
+ .transaction-detail-tile.completed {
+     background: linear-gradient(90deg, #f1f2f5, #e8e9eb);
+ }
+ 
+ .transaction-detail-tile.completed:hover {
+     background: linear-gradient(180deg, #a6b6d8, #b0c9e2);
+ }
+ 
+ .transaction-details-container.failed {
+     background: linear-gradient(90deg, #2c3e50, #34495e);
+ }
+ .transaction-detail-tile.failed {
+     background: linear-gradient(90deg, #f1f2f5, #e8e9eb);
+ }
+ .transaction-details-container.failed:hover {
+     background: linear-gradient(90deg, #173f64, #34495e);
+ }
+ 
+ .transaction-detail-tile.failed:hover {
+     background: linear-gradient(180deg, #a6b6d8, #b0c9e2);
+ }
+ 
+ 
+ .transaction-details-container.cancelled {
+     background: linear-gradient(90deg, #2c3e50, #34495e);
+ }
+ .transaction-details-container.cancelled:hover {
+     background: linear-gradient(90deg, #173f64, #34495e);
+ }
+ .transaction-detail-tile.cancelled {
+     background: linear-gradient(90deg, #f1f2f5, #e8e9eb);
+ }
+ 
+ .transaction-detail-tile.cancelled:hover {
+     background: linear-gradient(180deg, #a6b6d8, #b0c9e2);
+ }
+ 
+ .ender 
+ {
+     background: linear-gradient(90deg, #2c3e50, #34495e);
+ }
+ 
+ /*---------------------------------------------------------------------------------------------------------------------------------------*/
+ }
+ 
+ /* Pending - lighter shade of orange */
+ .transaction-details-page.pending {
+     background-color: #FFDD99; /* A lighter shade of orange */
+ }
+ 
+ /* Failed - lighter shade of red */
+ .transaction-details-page.failed {
+     background-color: #F4C6C3; /* A lighter shade of red */
+ }
+ 
+ /* Cancelled - lighter shade of grey */
+ .transaction-details-page.cancelled {
+     background-color: #d3d3d3; /* A lighter shade of grey */
+ }
+ 
+ /* Completed - lighter shade of green */
+ .transaction-details-page.completed {
+     background-color: #c1dfc4; /* A lighter shade of green */
+ }
+ 

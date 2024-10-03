@@ -1,0 +1,67 @@
+/* 
+  Transaction Result Styles
+  Author: [Prerak Semwal]
+  Date: [22-09-2024]
+  This file contains styles for displaying the transaction result, including success and failure notifications, buttons, and overall layout.
+*/
+
+.btr-transaction-result-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center; /* Center items vertically */
+  align-content: center; /* Center content */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #f2f2f2; /* Optional: background color */
+}
+
+.btr-transaction-result {
+  max-width: 100%; /* Full width with max limit */
+  margin: 50px auto; /* Center with margin */
+  padding: 20px; /* Padding inside the result box */
+  text-align: center; /* Center text alignment */
+  border-radius: 10px; /* Rounded corners */
+  background: #f9f9f9; /* Light background for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.btr-success-icon,
+.failure-icon {
+  font-size: 50px; /* Icon size */
+}
+
+.btr-success-icon {
+  color: #4caf50; /* Green color for success */
+}
+
+.btr-failure-icon {
+  color: #f44336; /* Red color for failure */
+}
+
+.btr-send_bt {
+  background-color: #4caf50; /* Green background for the button */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for button */
+  margin-top: 20px; /* Margin above button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Button text size */
+  border-radius: 5px; /* Rounded button */
+}
+
+.btr-send_bt:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.btr-send_bt:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+.btr-h3 {
+  font-size: 15px; /* Heading font size */
+  font-weight: bold; /* Bold text */
+}
+
+.btr-p {
+  font-weight: bold; /* Bold text for paragraphs */
+}

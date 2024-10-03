@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    background: linear-gradient(90deg, #2c3e50, #34495e);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 2.5em;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecf0f1; 
+  }
+  
+  .dashboard-title {
+    font-size: 38px;
+    color: #ecf0f1;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+    /* color: #000; */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 1.5rem;
+  }
+  
+  .profile-container:hover .profile-text {
+    /* color: #007bff; */
+    color: #bdc3c7;  
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid #bdc3c7;
+  }
+  
+  .profile-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ecf0f1;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 60px;
+   
+    background-color: #fff;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .profile-dropdown li {
+    padding: 10px;
+    font-size: 14px;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+  }
+  
+  .profile-dropdown li:hover {
+    /* background-color: #f1f1f1; */
+    background-color: #ecf0f1;  /* Soft hover effect */
+  color: #2c3e50;  /* Text darkens on hover */
+  }
+  

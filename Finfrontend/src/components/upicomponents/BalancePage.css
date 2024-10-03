@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjust height as necessary */
+}
+
+.balance-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 40px; /* Increased padding for larger card */
+    width: 500px; /* Increased width for the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+}
+
+.balance-message {
+    font-size: 20px; /* Font size for the balance message */
+    color: green; /* Green color for the message */
+    margin: 0; /* Remove default margin */
+    margin-top: 20px; /* Increased space between icon and message */
+}
+
+.status-icon {
+    font-size: 30px; /* Size for tick and cross */
+    margin-bottom: 10px; /* Space between icon and message */
+    width: 50px; /* Width of the circular container */
+    height: 50px; /* Height of the circular container */
+    border-radius: 50%; /* Make it circular */
+    display: flex;
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    margin: 0 auto; /* Center the icon container within the card */
+}
+
+.status-icon-success {
+    background-color: #d4edda; /* Light green background for success */
+    color: #28a745; /* Green color for tick */
+}
+
+.status-icon-failure {
+    background-color: #f8d7da; /* Light red background for failure */
+    color: #dc3545; /* Red color for cross */
+}

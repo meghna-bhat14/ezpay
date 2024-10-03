@@ -1,0 +1,32 @@
+.login-error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8d7da;
+  }
+  
+  .login-error {
+    display: flex;
+    align-items: center;
+    background-color: #f5c6cb;
+    color: #721c24;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #f5c2c7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #721c24;
+  }
+  
+  .error-message {
+    font-size: 16px;
+    font-weight: bold;
+    color: #721c24;
+  }
+  

@@ -1,0 +1,298 @@
+/*
+@Author Meghna Bhat
+@Date 22md September
+*/
+
+
+/* CSS files for upi payment component */
+/* CSS FOR UPI PAYMENT TP BE PASTED HERE  */
+
+/* ----------------------------------------------------------------------------------------- */
+/* DEMO UPIPAYMENT CSS */
+
+/* Main container and card style */
+.upi_contact_section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.upi_container-fluid {
+    max-width: 500px;
+    margin: auto;
+}
+
+.upi_what_taital {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+.upi_form_card {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 4px 15px #5e768e; /* Card-like shadow */
+    border-radius: 10px;    
+    
+}
+
+/* Input and button styles */
+.upi_mail_text_1 {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upi_send_bt {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.upi_send_bt:hover {
+    background-color: #4b6b88;
+}
+
+/* Loading and suggestion styles */
+.upi_loading-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* PAYMENT PROCESSING GIF */
+/* Centering the loading container */
+.upi_loading-indicator {
+    text-align: center;
+    padding: 20px;
+    font-size: 50px; /* Increase the font size to 50px */
+    font-weight: bold;
+  
+}
+
+#payment_in_progress{
+    font-size: 30px;
+}
+
+/* Optional: Adjust the size of the gif */
+.upi_loading-gif {
+    width: 100px; /* Adjust width as needed */
+    height: auto;
+    margin-top: 10px;
+}
+
+
+.upi_error {
+    color: red;
+    margin: 0 0 0; /* No margin at the top, small margin at the bottom */
+    font-size: 0.805rem; /* Optional: smaller font size for error message */
+}
+
+.upi_suggestion {
+    font-size: 12px;
+    color: #888;
+}
+
+.upi_toggle-pin-visibility {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+/* Flex container for input field and eye icon */
+.upi_pin-container {
+    display: flex;
+    align-items: center; /* Vertically center the button with input */
+    position: relative;
+    width: 440px;
+    
+}
+
+.upi_pin_input {
+    flex: 1; /* Make input take up the remaining space */
+}
+
+.upi_toggle-pin-visibility {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    margin-left: -40px; /* Adjust this value to align the button better with input */
+    position: absolute;
+    right: 5px;
+    margin-top:3px;
+}
+
+
+/* Adjusting the input container spacing */
+.upi_input-container {
+    margin-bottom: 0px; /* Adding spacing between elements */
+    
+   
+}
+
+/* Input styling remains the same */
+.upi_mail_text_1 {
+    /* width: 100%; */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #1d4369;
+    border-radius: 5px;
+    width: 418px;
+}
+
+
+/* UPI ID label styling */
+.upi_id-label {
+    font-size: 16px;
+    font-weight: normal;
+    color: #2c3e50;
+    margin-bottom: 0px; /* Space between this line and the next input */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Align text to the left */
+    margin-left: -10px;
+}
+
+/* Optional: Styling the UPI ID itself for emphasis */
+.upi_id-label span {
+    /* font-weight: bold; */
+    margin-left: 2px; /* Small space between "Your UPI ID" and the ID */
+    color: #2c3e50;
+}
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* //for upipayment */
+/* PAYMENT RESULT ORIGINAL CSS TO COME HERE  */
+/* UpiPayment.css */
+
+
+/*  CSS FOR PAYMENT RESULT */
+
+
+.payment-result {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; 
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f2f2f2; /* Optional: background color */
+}
+
+.ezpay-title {
+    font-size: 2em; /* Adjust font size */
+    color: #2c3e50; /* Title color */
+    margin-bottom: 10px; /* Spacing below title */
+
+  
+}
+
+
+.result-container {
+    max-width: 100%; /* Full width with max limit */
+    margin: 0 auto; /* Center with margin */
+    padding: 20px; /* Padding inside the result box */
+    justify-content: center;
+}
+
+.result-card {
+    width: 350px; /* or any percentage you want */
+    max-width: 500px; /* Limits the maximum width */
+    background-color: #ffffff; /* Background color */
+    padding: 40px; /* Padding inside the card */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text alignment */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 400px;
+    margin-left: 17px;
+}
+
+
+.result-header {
+    color: #2c3e50; 
+    margin-right: 10px; /* Spacing between amount and the image */
+    font-size: 15px;
+}
+
+.status-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.amount {
+    color: #2c3e50; 
+    margin-right: 10px; 
+    font-size: 30px;
+    margin-top: 2px;
+}
+
+.status-image {
+    width: 50px;
+    height: auto;
+}
+
+.transaction-details, .transaction-date {
+    margin-bottom: 10px; /* Add some margin */
+    text-align: center;
+    color: #b2a318; /* Adjusted color */
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    width: 80px;
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 40px;
+    background-color: #2c3e50; 
+}
+
+.button-container button:hover {
+    background-color: #34495e;
+}
+
+.error-reason {
+    margin-top: -10px;
+    color: #f44336; /* Red color for errors */
+    text-align: center;
+}

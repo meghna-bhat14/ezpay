@@ -1,0 +1,14 @@
+/* ToastStyles.css */
+.custom-toast {
+    font-size: 18px; /* Increase the font size */
+    padding: 16px; /* Add padding */
+    border-radius: 8px; /* Round corners */
+}
+
+.toast-success {
+    background-color: #28a745; /* Green background for success */
+}
+
+.toast-error {
+    background-color: #dc3545; /* Red background for error */
+}

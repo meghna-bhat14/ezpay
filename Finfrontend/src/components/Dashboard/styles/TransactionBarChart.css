@@ -1,0 +1,51 @@
+.chart-container {
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  
+  .chart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Custom styles for Recharts components */
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    stroke: #e0e0e0;
+  }
+  
+  .recharts-xAxis .recharts-cartesian-axis-tick-value,
+  .recharts-yAxis .recharts-cartesian-axis-tick-value {
+    fill: #666;
+    font-size: 12px;
+  }
+  
+  .recharts-tooltip-wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .recharts-default-tooltip {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+  }
+  
+  .recharts-tooltip-item {
+    color: #333 !important;
+  }
+  
+  .recharts-legend-item-text {
+    color: #666;
+  }
