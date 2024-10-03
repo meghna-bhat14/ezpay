@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        .success-heading {
+            color: #4CAF50;
+        }
+        .transaction-details {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .highlight-amount {
+            color: #ff5722; /* Use a bright color like orange */
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="transaction-details">
+        <h2 class="success-heading">Transaction Successful</h2>
+        <p>Dear <span th:text="${senderName}"></span>,</p>
+        <p>You have sent <strong class="highlight-amount"><span th:text="${amount}"></span></strong> to <strong><span th:text="${receiverName}"></span></strong>. Below are the details:</p>
+        <ul>
+            <li><strong>Transaction ID:</strong> <span th:text="${transactionId}"></span></li>
+			<li><strong>Label(Note):</strong> <span th:text="${label}"></span></li>
+            <li><strong>Status:</strong> <span th:text="${status}"></span></li>
+            <li><strong>Date:</strong> <span th:text="${timestampFinal}"></span></li>
+			<li class="highlight-amount"><strong>Avl Balance:</strong> <span th:text="${balance}"></span></li>
+        </ul>
+        <p>Thank you for using our service!</p>
+        <p>Best regards,<br/>EzPay Team</p>
+    </div>
+</body>
+</html>
